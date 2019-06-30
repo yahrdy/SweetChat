@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "883326938444",
+    "firebase_url": "https://sweetchat-15fbe.firebaseio.com",
+    "project_id": "sweetchat-15fbe",
+    "storage_bucket": "sweetchat-15fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883326938444:android:649d28e535b22041",
+        "android_client_info": {
+          "package_name": "hridoy.sumaiya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883326938444-9o90fd96qnqm8gd5a1h3efp5ds7tegl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hridoy.sumaiya",
+            "certificate_hash": "cb33d337d89373be9194ef881bf4c0a37b6549ba"
+          }
+        },
+        {
+          "client_id": "883326938444-asnanr30u394t787nnhlaho1ftjqk7o7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSZ-ibyoRUIm8bEgnlFsJxlcLAcWYA3og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883326938444-asnanr30u394t787nnhlaho1ftjqk7o7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
