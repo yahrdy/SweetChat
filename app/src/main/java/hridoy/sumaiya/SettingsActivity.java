@@ -69,16 +69,16 @@ public class SettingsActivity extends AppCompatActivity {
         String setStatus = userStatus.getText().toString();
 
         if (TextUtils.isEmpty(setUsername)) {
-            Toast.makeText(this, "Please chooose a username for you", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please choose a username for you", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(setStatus)) {
             Toast.makeText(this, "Please give a status", Toast.LENGTH_SHORT).show();
         } else {
-            HashMap<String, String> profileMap = new HashMap<>();
+            HashMap<String, Object> profileMap = new HashMap<>();
             profileMap.put("uid", currentUserId);
             profileMap.put("name", setUsername);
             profileMap.put("status", setStatus);
 
-            databaseReference.child("Users").child(currentUserId).setValue(profileMap)
+            databaseReference.child("Users").child(currentUserId).updateChildren(profileMap)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -87,8 +87,8 @@ public class SettingsActivity extends AppCompatActivity {
                                 Toast.makeText(SettingsActivity.this,"Profile updated successfully.",Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                String meeeage = task.getException().toString();
-                                Toast.makeText(SettingsActivity.this,"Error: "+meeeage,Toast.LENGTH_SHORT).show();
+                                String message = task.getException().toString();
+                                Toast.makeText(SettingsActivity.this,"Error: "+message,Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
