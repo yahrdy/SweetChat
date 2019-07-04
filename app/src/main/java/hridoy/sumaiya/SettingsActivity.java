@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,6 +34,8 @@ public class SettingsActivity extends AppCompatActivity {
     private String currentUserId;
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
+
+    private Toolbar settingsToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,12 @@ public class SettingsActivity extends AppCompatActivity {
         username = findViewById(R.id.set_user_name);
         userStatus = findViewById(R.id.set_user_status);
         userProfileImage = findViewById(R.id.spread_inside);
+        settingsToolbar = findViewById(R.id.settings_toolbar);
+
+        setSupportActionBar(settingsToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setTitle("Settings");
     }
 
     private void updateSettings() {
